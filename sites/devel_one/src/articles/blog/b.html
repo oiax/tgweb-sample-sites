@@ -1,0 +1,19 @@
+---
+[main]
+title = "Blog Article B"
+index = 2
+tags = [ "active" ]
+
+[data]
+
+name = "Alice"
+red = "text-red-500"
+
+[style]
+
+cursive = "italic"
+---
+
+<p>My name is <tg:data name="name"></tg:data>.</p>
+<p class="${red}" tg:class="cursive">Nice to meet you.</p>
+<tg:insert name="date">2023-01-02</tg:insert>

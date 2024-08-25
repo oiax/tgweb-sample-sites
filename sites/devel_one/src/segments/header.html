@@ -1,0 +1,93 @@
+---
+[style]
+header = """
+  sticky top-0 z-20
+  flex justify-between relative
+  bg-nav-s text-nav-c
+  mx-auto
+  px-1 md:px-2 py-2
+  text-center
+  """
+
+menu-items = """
+  absolute z-[1000] right-2 top-12
+  bg-white text-gray-800 divide-y divide-solid divide-slate-300
+  rounded drop-shadow-lg
+  [&>li] { cursor-pointer }
+  [&>li>a] { block p-2 }
+  [&>li>span] { block p-2 }
+  hover:[&>li]:bg-gray-200
+  """
+
+a = "text-blue-700 font-bold mx-2"
+---
+
+<header tg:toggler tg:class="header">
+  <div class="font-['Lobster']">TGWEB DEVEL ONE</div>
+  <div class="inline-flex">
+    <button type="button" class="inline-flex" tg:toggle tg:when="off">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <button type="button" class="inline-flex" tg:toggle tg:when="on">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <ul tg:when="on" tg:class="menu-items">
+    <li>
+      <tg:link href="/">
+        <a tg:class="a" href="#">Home</a>
+        <tg:if-current>
+          <span class="font-bold">Home</span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+    <li>
+      <tg:link href="/about.html">
+        <a tg:class="a" href="#">About</a>
+        <tg:if-current>
+          <span class="font-bold">About</span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+    <li>
+      <tg:link href="/modals.html">
+        <a tg:class="a" href="#">Modals</a>
+        <tg:if-current>
+          <span class="font-bold">Modals</span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+    <li>
+      <tg:link href="/nested.html">
+        <a tg:class="a" href="#">Nested</a>
+        <tg:if-current>
+          <span class="font-bold">Nested</span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+    <li>
+      <tg:link href="/circular_reference.html" label="Circular Reference">
+        <a tg:class="a" href="#"><tg:label></tg:label></a>
+        <tg:if-current>
+          <span class="font-bold"><tg:label></tg:label></span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+    <li>
+      <tg:link href="/bg_image.html" label="Background Image">
+        <a tg:class="a" href="#"><tg:label></tg:label></a>
+        <tg:if-current>
+          <span class="font-bold"><tg:label></tg:label></span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+    <li>
+      <tg:link href="/lottie.html" label="Animation">
+        <a tg:class="a" href="#"><tg:label></tg:label></a>
+        <tg:if-current>
+          <span class="font-bold"><tg:label></tg:label></span>
+        </tg:if-current>
+      </tg:link>
+    </li>
+  </ul>
+</header>

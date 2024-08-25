@@ -1,0 +1,34 @@
+[main]
+layout = "default"
+html-class = "scroll-smooth"
+
+[meta.name]
+viewport = "width=device-width, initial-scale=1"
+description = "An example site for tgweb development"
+robots = "index,follow"
+generator = "Teamgenik"
+
+[font.material-symbols]
+outlined = true
+rounded = { fill = 1, grad = 0, opsz = 24, wght = 200 }
+sharp = { fill = 0, grad = 200, opsz = 40, wght = 300 }
+sharp-strong = { fill = 1, grad = 200, opsz = 48, wght = 700 }
+
+[font.google-fonts]
+"Pathway Extreme" = true
+Oswald = [400, 700]
+Roboto = { normal = [300], italic = [300] }
+Lobster = true
+
+[data]
+this-year = 2023
+
+[[apps]]
+name = "fizz_buzz"
+id = "4aa00536-5cab-4450-9477-c629c7dbe34c"
+display-name = "Fizz Buzz"
+
+[[apps]]
+name = "kanji_quiz"
+id = "26af1f6c-0ec6-48f6-a6a4-63ac8b557eab"
+display-name = "漢字クイズ"

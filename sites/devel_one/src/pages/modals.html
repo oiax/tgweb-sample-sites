@@ -1,0 +1,64 @@
+---
+[style]
+body = """
+  rounded-2xl p-4 backdrop:bg-gray-800/80 w-[480px] h-[480px] p-4
+  """
+---
+
+<tg:segment name="hero"><tg:insert name="message">Modals</tg:insert></tg:segment>
+
+<div class="grid grid-cols-2 gap-2 my-2 mx-auto w-[720px]">
+  <div tg:modal tg:open class="bg-red-500 p-4 h-[360px]">
+    <h2 class="text-3xl font-bold">Greetings</h2>
+    <dialog tg:close class="bg-red-500" tg:class="body">
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h2 class="text-3xl font-bold">Greetings</h2>
+          <p>Hello, world!</p>
+        </div>
+      </div>
+    </dialog>
+  </div>
+  <div tg:modal class="bg-green-500 p-4 h-[360px]">
+    <div><button type="button" class="btn" tg:open>Open</button></div>
+    <dialog class="bg-green-500" tg:class="body">
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h2 class="text-3xl font-bold">Farewell</h2>
+          <p>Good bye!</p>
+        </div>
+        <div class="flex justify-end">
+          <button type="button" class="btn" tg:close>Close</button>
+        </div>
+      </div>
+    </dialog>
+  </div>
+  <div tg:modal class="bg-blue-500 p-4 h-[360px]">
+    <div><button type="button" class="btn" tg:open>Open</button></div>
+    <dialog class="bg-blue-500" tg:class="body">
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h2 class="text-3xl font-bold">OMG</h2>
+          <p>Oh my god!</p>
+        </div>
+        <div class="flex justify-end">
+          <button type="button" class="btn" tg:close>Close</button>
+        </div>
+      </div>
+    </dialog>
+  </div>
+  <div tg:modal class="bg-yellow-500 p-4 h-[360px]">
+    <div><button type="button" class="btn" tg:open>Open</button></div>
+    <dialog class="bg-yellow-500" tg:class="body">
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h2 class="text-3xl font-bold">I am hungry.</h2>
+          <p>Give me some food.</p>
+        </div>
+        <div class="flex justify-end">
+          <button type="button" class="btn" tg:close>Close</button>
+        </div>
+      </div>
+    </dialog>
+  </div>
+</div>

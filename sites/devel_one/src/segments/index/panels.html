@@ -1,0 +1,12 @@
+---
+[style]
+grid = """
+  md:grid md:grid-cols-2 gap-4
+  md:max-w-3xl
+  mx-auto
+  """
+---
+
+<div tg:class="grid">
+  <tg:articles pattern="panels/*" order-by="index:asc" filter="tag:active"></tg:article>
+</div>

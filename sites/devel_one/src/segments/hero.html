@@ -1,0 +1,16 @@
+---
+[data]
+hero-title = "TGWEB DEVEL ONE"
+---
+<div class="relative mb-4 md:h-80">
+  <img
+    src="/images/calm-lake-mirror.avif"
+    class="absolute z-0 h-full w-full object-cover object-center"
+  />
+  <div
+    class="relative z-10 bg-gradient-to-r from-bas-s to-transparent text-pri-s"
+  >
+    <p class="py-8 px-4 text-3xl font-['Pathway_Extreme'] font-[800] tracking-wider"><tg:data name="hero-title"></tg:data></p>
+    <p class="py-4 px-4 font-['Roboto'] font-[300] italic"><tg:slot name="message"></tg:slot></p>
+  </div>
+</div>

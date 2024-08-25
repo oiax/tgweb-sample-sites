@@ -1,0 +1,30 @@
+---
+[style]
+wrapper = """
+  md:rounded-2xl
+  bg-gray-200
+  m-2
+  md:m-0
+  p-4
+  [&>p]:mb-2
+  [&>p:last-child]:mb-0
+  """
+
+h2 = """
+  text-red-800
+  font-bold
+  text-2xl
+  mb-2
+  """
+---
+
+<div tg:class="wrapper">
+  <h2 tg:class="h2"><tg:prop name="title">No title</tg:prop></h2>
+  <tg:content></tg:content>
+  <tg:if-complete>
+    <hr class="border border-gray-400" />
+    <div class="ml-4 mt-2 text-sm text-gray-600">
+      <tg:slot name="note"></tg:slot>
+    </div>
+  </tg:if-complete>
+</div>

@@ -1,0 +1,31 @@
+---
+[style]
+nav = """
+  my-2 flex justify-center
+  [&>button] { mx-1 }
+  """
+---
+
+<div tg:switcher tg:class="my-4" tg:interval="5000" tg:transition-duration="1500">
+  <div tg:body class="mx-auto">
+    <tg:article name="switcher_items/item1"></tg:article>
+    <tg:article name="switcher_items/item2"></tg:article>
+    <tg:article name="switcher_items/item3"></tg:article>
+    <tg:article name="switcher_items/item4"></tg:article>
+  </div>
+  <nav tg:class="nav">
+    <button type="button" tg:first class="btn" tg:disabled-class="btn-disabled">First</button>
+    <button type="button" tg:prev class="btn" tg:disabled-class="btn-disabled">Prev</button>
+    <button type="button" tg:next class="btn" tg:disabled-class="btn-disabled">Next</button>
+    <button type="button" tg:last class="btn" tg:disabled-class="btn-disabled">Last</button>
+  </nav>
+  <nav tg:class="nav">
+    <button type="button" tg:choose="0" class="btn" tg:current-class="btn-primary cursor-default">A</button>
+    <button type="button" tg:choose="1" class="btn" tg:current-class="btn-primary cursor-default">B</button>
+    <button type="button" tg:choose="2" class="btn" tg:current-class="btn-primary cursor-default">C</button>
+    <button type="button" tg:choose="3" class="btn" tg:current-class="btn-primary cursor-default">D</button>
+  </nav>
+  <nav tg:class="nav">
+    <tg:component name="choose_button"></tg:component>
+  </nav>
+</div>

@@ -1,0 +1,99 @@
+---
+[style]
+box = """
+  w-48 h-48 mx-auto flex justify-center items-center text-2xl text-white
+  transition duration-500
+  """
+---
+
+<a id="trams"></a>
+<div tg:tram class="mb-32">
+  <div
+    tg:class="box"
+    tg:init="bg-black"
+    tg:forward-50="bg-red-500"
+    tg:backward-50="bg-black"
+  >
+    <div>Hello, world!</div>
+  </div>
+</div>
+
+<div tg:tram class="mb-32 overflow-hidden">
+  <div
+    class="bg-black text-white"
+    tg:class="box"
+    tg:init="opacity-0 translate-x-[50vw]"
+    tg:forward-100%="opacity-100 translate-x-0"
+    tg:forward-50="opacity-100 translate-x-0 bg-red-500"
+    tg:forward-10vh-="opacity-100 translate-x-0 bg-yellow-500"
+    tg:backward-50%-="opacity-100 translate-x-0 bg-red-500"
+    tg:backward-50="opacity-100 translate-x-0 bg-black"
+    tg:backward-100%="opacity-0 translate-x-[50vw]"
+  >
+    <div>Hello, world!</div>
+  </div>
+</div>
+
+<div tg:tram class="mb-32 overflow-hidden">
+  <div
+    class="bg-cyan-800 text-white"
+    tg:class="box"
+    tg:init="opacity-0 translate-x-[-50vw]"
+    tg:forward-100%="opacity-100 translate-x-0"
+    tg:forward-50="opacity-100 translate-x-0 bg-purple-500"
+    tg:forward-90vh="opacity-100 translate-x-0 bg-pink-500"
+    tg:backward-100="opacity-100 translate-x-0 bg-pink-500"
+    tg:backward-90vh="opacity-100 translate-x-0 bg-purple-500"
+    tg:backward-50="opacity-100 translate-x-0"
+    tg:backward-100%="opacity-0 translate-x-[-50vw]"
+    <div>Hello, world!</div>
+  </div>
+</div>
+
+<div class="-mt-32 overflow-hidden">
+  <div tg:tram class="mb-32 mt-32 overflow-visible">
+    <div
+      class="bg-pink-800 text-white"
+      tg:class="box"
+      tg:init="opacity-0 translate-x-48 rotate-90"
+      tg:forward-100%="opacity-100 translate-x-0 rotate-0"
+      tg:backward-150%="opacity-0 translate-x-48 rotate-90"
+      <div>Hello, world!</div>
+    </div>
+  </div>
+</div>
+
+<div tg:tram class="mb-32">
+  <div
+    class="bg-yellow-800 text-white"
+    tg:class="box"
+    tg:init="opacity-50 blur"
+    tg:forward-150%="opacity-100 blur-none"
+    tg:backward-50="opacity-50 blur"
+    <div>Hello, world!</div>
+  </div>
+</div>
+
+<div tg:tram class="mb-32">
+  <div
+    class="bg-lime-500 text-white"
+    tg:class="box"
+    tg:init="skew-y-0"
+    tg:forward-200%="skew-y-12"
+    tg:forward-300%="-skew-y-12"
+    tg:backward-300%="skew-y-12"
+    tg:backward-200%="skew-y-0"
+    <div>Hello, world!</div>
+  </div>
+</div>
+
+<div tg:tram class="mb-32">
+  <div
+    class="bg-yellow-800 text-white"
+    tg:class="box"
+    tg:init="opacity-50 scale-0"
+    tg:forward-100%="opacity-100 scale-100"
+    tg:backward-25%="opacity-50 scale-0"
+    <div>Hello, world!</div>
+  </div>
+</div>

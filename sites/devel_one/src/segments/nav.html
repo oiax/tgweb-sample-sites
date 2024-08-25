@@ -1,0 +1,43 @@
+---
+[style]
+a = "text-blue-700 font-bold underline mx-2"
+---
+
+<nav class="mt-4 text-center">
+  <tg:link href="/">
+    <a tg:class="a" href="#">Home</a>
+    <tg:if-current>
+      <span class="font-bold">Home</span>
+    </tg:if-current>
+  </tg:link>
+  <tg:link href="/about.html">
+    <a tg:class="a" href="#">About</a>
+    <tg:if-current>
+      <span class="font-bold">About</span>
+    </tg:if-current>
+  </tg:link>
+  <tg:link href="/modals.html">
+    <a tg:class="a" href="#">Modals</a>
+    <tg:if-current>
+      <span class="font-bold">Modals</span>
+    </tg:if-current>
+  </tg:link>
+  <tg:link href="/nested.html">
+    <a tg:class="a" href="#">Nested</a>
+    <tg:if-current>
+      <span class="font-bold">Nested</span>
+    </tg:if-current>
+  </tg:link>
+  <tg:link href="/circular_reference.html" label="Circular Reference">
+    <a tg:class="a" href="#"><tg:label></tg:label></a>
+    <tg:if-current>
+      <span class="font-bold"><tg:label></tg:label></span>
+    </tg:if-current>
+  </tg:link>
+  <tg:link href="/bg_image.html" label="Background Image">
+    <a tg:class="a" href="#"><tg:label></tg:label></a>
+    <tg:if-current>
+      <span class="font-bold"><tg:label></tg:label></span>
+    </tg:if-current>
+  </tg:link>
+</nav>

@@ -1,0 +1,34 @@
+---
+[style]
+carousel-basis = "my-4"
+carousel-wrapper = "relative"
+carousel-frame = "mx-auto min-[480px]:w-[480px]"
+carousel-overlay = "absolute mx-auto inset-0 flex min-[480px]:w-[480px]"
+carousel-footer = "flex justify-center"
+---
+
+<div tg:carousel tg:transition-duration="1000" tg:class="carousel-basis" id="carousel">
+  <div tg:class="carousel-wrapper">
+    <div tg:frame tg:class="carousel-frame">
+      <div tg:body class="ease-in-out">
+        <tg:article name="slides/slide1"></tg:article>
+        <tg:article name="slides/slide2"></tg:article>
+        <tg:article name="slides/slide3"></tg:article>
+        <tg:article name="slides/slide4"></tg:article>
+      </div>
+    </div>
+
+    <div tg:class="carousel-overlay">
+      <div class="flex w-1/2 items-center justify-start">
+        <tg:component name="prev_button"></tg:component>
+      </div>
+      <div class="flex w-1/2 items-center justify-end">
+        <tg:component name="next_button"></tg:component>
+      </div>
+    </div>
+  </div>
+
+  <div tg:class="carousel-footer">
+    <tg:component name="choose_button"></tg:component>
+  </div>
+</div>

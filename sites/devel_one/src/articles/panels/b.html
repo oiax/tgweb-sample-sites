@@ -1,0 +1,21 @@
+---
+[main]
+title = "Panel B"
+index = 2
+tags = [ "active" ]
+
+[data]
+
+name = "Alice"
+red = "text-red-500"
+
+[style]
+
+cursive = "italic"
+---
+
+<p>
+  My name is <tg:data name="name"></tg:data>.
+  <tg:if-embedded>(^^)</tg:if-embedded>
+</p>
+<p class="${red}" tg:class="cursive">Nice to meet you.</p>

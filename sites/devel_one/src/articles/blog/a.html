@@ -1,0 +1,22 @@
+---
+[main]
+title = "Blog Article A"
+index = 3
+tags = [ "active" ]
+
+[data]
+url = "https://teamgenik.com"
+---
+
+<p>Hello.</p>
+
+<p><a href="${url}" class="underline text-blue-500">Teamgenik</a></p>
+
+<tg:unless-embedded>
+  <hr class="border border-gray-500">
+  <small class="text-gray-500">
+    Not embedded.
+  </small>
+</tg:unless-embedded>
+
+<tg:insert name="date">2023-01-01</tg:insert>
